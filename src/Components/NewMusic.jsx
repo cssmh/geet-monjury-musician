@@ -19,7 +19,7 @@ const NewMusic = () => {
           <iframe
             width="100%"
             height="auto"
-            className="w-full h-[315px] sm:h-[400px] lg:h-[500px]"
+            className="w-full rounded-md h-[315px] sm:h-[400px] lg:h-[500px]"
             src="https://www.youtube.com/embed/Wrh74F4zWpc?si=YNRzmbPrJybfA8NH"
             title="YouTube video player"
             frameBorder="0"
