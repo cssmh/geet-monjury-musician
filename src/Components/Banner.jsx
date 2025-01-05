@@ -41,7 +41,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full h-screen focus:outline-none">
+    <div className="relative w-full focus:outline-none">
       <Slider {...settings}>
         {images.map((img, index) => (
           <div key={index} className="w-full h-[30vh] md:h-[50vh] lg:h-[83vh] focus:outline-none">
