@@ -45,11 +45,7 @@ const Navbar = () => {
       <div className="flex justify-center items-center">
         <div className="hidden md:flex space-x-5">
           {navItems.slice(0, 3).map((item) => (
-            <Link
-              to={item.to}
-              key={item.label}
-              className="hover:text-red-500"
-            >
+            <Link to={item.to} key={item.label} className="hover:text-red-500">
               {item.label}
             </Link>
           ))}
@@ -59,11 +55,7 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex space-x-5">
           {navItems.slice(3).map((item) => (
-            <Link
-              to={item.to}
-              key={item.label}
-              className="hover:text-red-500"
-            >
+            <Link to={item.to} key={item.label} className="hover:text-red-500">
               {item.label}
             </Link>
           ))}
@@ -81,9 +73,9 @@ const Navbar = () => {
       </div>
       <div
         ref={menuRef}
-        className={`fixed top-[74px] z-50 w-full bg-gray-800 text-white p-4 transition-transform transform ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        } md:hidden`}
+        className={`${
+          isMenuOpen ? "block" : "hidden"
+        } absolute top-[74px] left-0 w-full bg-gray-800 text-white p-4 transition-all z-50`}
       >
         <motion.div
           className="flex flex-col space-y-5 mx-5"

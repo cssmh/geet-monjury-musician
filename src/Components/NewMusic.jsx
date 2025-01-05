@@ -14,8 +14,8 @@ const NewMusic = () => {
           Listen Now
         </button>
       </div>
-      <div className="flex justify-center items-center mt-12 mb-16">
-        <div className="lg:w-2/3 mx-auto">
+      <div className="flex justify-center items-center my-12">
+        <div className="w-full lg:w-2/3 mx-2 lg:mx-auto">
           <iframe
             width="100%"
             height="auto"
