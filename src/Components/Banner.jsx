@@ -14,7 +14,7 @@ const Banner = () => {
 
   const NextArrow = ({ onClick }) => (
     <div
-      className="absolute top-1/2 right-5 transform -translate-y-1/2 z-10 cursor-pointer text-white p-2 rounded-full"
+      className="absolute top-1/2 right-2 lg:right-5 transform -translate-y-1/2 z-10 cursor-pointer text-white p-2 rounded-full focus:outline-none"
       onClick={onClick}
     >
       <AiOutlineRight size={24} />
@@ -23,7 +23,7 @@ const Banner = () => {
 
   const PrevArrow = ({ onClick }) => (
     <div
-      className="absolute top-1/2 left-5 transform -translate-y-1/2 z-10 cursor-pointer text-white p-2 rounded-full"
+      className="absolute top-1/2 left-2 lg:left-5 transform -translate-y-1/2 z-10 cursor-pointer text-white p-2 rounded-full focus:outline-none"
       onClick={onClick}
     >
       <AiOutlineLeft size={24} />
@@ -41,14 +41,14 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen focus:outline-none">
       <Slider {...settings}>
         {images.map((img, index) => (
-          <div key={index} className="w-full h-[83vh]">
+          <div key={index} className="w-full h-[30vh] md:h-[50vh] lg:h-[83vh] focus:outline-none">
             <img
               src={img}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover rounded-lg pointer-events-none"
             />
           </div>
         ))}

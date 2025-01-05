@@ -81,7 +81,7 @@ const Navbar = () => {
       </div>
       <div
         ref={menuRef}
-        className={`fixed top-[76px] z-50 w-full bg-gray-800 text-white p-4 transition-transform transform ${
+        className={`fixed top-[74px] z-50 w-full bg-gray-800 text-white p-4 transition-transform transform ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } md:hidden`}
       >
