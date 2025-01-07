@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import logo from "../assets/monjory_logo.png";
 import { MdClose } from "react-icons/md";
 import { AiOutlineBars } from "react-icons/ai";
-import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -41,7 +41,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-gray-900 text-white py-4">
+    <nav className="bg-gray-900 text-white py-1">
       <div className="flex justify-center items-center">
         <div className="hidden md:flex space-x-5">
           {navItems.slice(0, 3).map((item) => (
@@ -51,7 +51,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className="text-center mx-8 hidden md:block">
-          <img src={logo} alt="logo" className="mx-auto w-72" />
+          <img src={logo} alt="logo" className="mx-auto w-40" />
         </div>
         <div className="hidden md:flex space-x-5">
           {navItems.slice(3).map((item) => (
@@ -62,7 +62,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="md:hidden flex justify-between items-center px-4">
-        <img src={logo} alt="logo" className="w-44" />
+        <img src={logo} alt="logo" className="w-32" />
         <button className="text-white" onClick={() => setMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? (
             <MdClose className="text-white h-6 w-6" />

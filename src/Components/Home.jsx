@@ -1,6 +1,7 @@
 import Artists from "../Pages/Artists";
 import MusicVideo from "../Pages/MusicVideo";
 import Banner from "./Banner";
+import SocialHandles from "./SocialHandles";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Banner />
       <MusicVideo />
       <Artists />
+      <SocialHandles />
     </div>
   );
 };
