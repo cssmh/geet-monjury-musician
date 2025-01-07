@@ -3,7 +3,7 @@ const NewMusic = () => {
     <div className="my-6 lg:my-10">
       <div className="text-white text-center space-y-3">
         <h1 className="text-3xl lg:text-5xl font-semibold text-red-500">
-          New Music Release!
+          <span className="text-red-500">New</span> Music Release!
         </h1>
         <p className="lg:w-2/3 mx-4 text-base lg:mx-auto text-gray-300">
           Discover the latest track of the season! Dive into the rhythms, beats,

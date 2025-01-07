@@ -11,7 +11,7 @@ const MusicVideo = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        New Music Shorts
+        <span className="text-red-500">New</span> Music Shorts
       </motion.h2>
       <motion.p
         className="text-sm text-center mb-2 md:mb-6 px-4"

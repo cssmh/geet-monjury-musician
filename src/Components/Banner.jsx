@@ -1,4 +1,4 @@
-import banner from "../assets/banner.jpg";
+import banner from "../assets/banner.jpeg";
 import band from "../assets/artist.jpg";
 import band1 from "../assets/band.jpg";
 import band2 from "../assets/bang2.jpg";
@@ -41,6 +41,8 @@ const Banner = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
 
   return (

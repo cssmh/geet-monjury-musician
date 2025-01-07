@@ -1,4 +1,4 @@
-import bg from "../assets/bgg.jpg";
+import bg from "../assets/explore.jpg";
 const Explore = () => {
   return (
     <div

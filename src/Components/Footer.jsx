@@ -1,30 +1,14 @@
-import { Link } from "react-router-dom";
-
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div className="flex flex-col lg:flex-row gap-8 text-center md:text-left">
           <div>
             <h2 className="text-2xl font-bold mb-4">Geet Monjory</h2>
-            <p className="text-gray-400">
-              Celebrate the joy of music with Mugican. Connecting music lovers,
+            <p className="text-gray-400 lg:w-2/3">
+              Celebrate the joy of music with Geet Monjory. Connecting music lovers,
               artists, and communities worldwide.
             </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-            <div className="flex justify-center md:justify-start items-center gap-4">
-              <Link to="/about-us" className="hover:text-red-500">
-                About Us
-              </Link>
-              <Link to="/gallery" className="hover:text-red-500">
-                Gallery
-              </Link>
-              <Link to="/contact" className="hover:text-red-500">
-                Contact
-              </Link>
-            </div>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
