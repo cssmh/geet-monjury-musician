@@ -19,11 +19,16 @@ const Navbar = () => {
   ];
 
   const variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (custom) => ({
+    hidden: { opacity: 0, x: -20 },
+    visible: (i) => ({
       opacity: 1,
-      y: 0,
-      transition: { delay: custom * 0.1 },
+      x: 0,
+      transition: {
+        stiffness: 70,
+        damping: 10,
+        delay: i * 0.2,
+        duration: 0.4,
+      },
     }),
   };
 
@@ -42,40 +47,77 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-900 text-white py-1">
+      {/* Desktop Navbar */}
       <div className="flex justify-center items-center">
         <div className="hidden md:flex space-x-5">
-          {navItems.slice(0, 3).map((item) => (
-            <Link to={item.to} key={item.label} className="hover:text-red-500">
-              {item.label}
-            </Link>
+          {navItems.slice(0, 3).map((item, index) => (
+            <motion.div
+              key={item.label}
+              initial="hidden"
+              animate="visible"
+              custom={index}
+              variants={variants}
+            >
+              <Link to={item.to} className="hover:text-red-500">
+                {item.label}
+              </Link>
+            </motion.div>
           ))}
         </div>
         <div className="text-center mx-8 hidden md:block">
-          <img src={logo} alt="logo" className="mx-auto w-40" />
+          <motion.img
+            src={logo}
+            alt="logo"
+            className="mx-auto w-40"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          />
         </div>
         <div className="hidden md:flex space-x-5">
-          {navItems.slice(3).map((item) => (
-            <Link to={item.to} key={item.label} className="hover:text-red-500">
-              {item.label}
-            </Link>
+          {navItems.slice(3).map((item, index) => (
+            <motion.div
+              key={item.label}
+              initial="hidden"
+              animate="visible"
+              custom={index}
+              variants={variants}
+            >
+              <Link to={item.to} className="hover:text-red-500">
+                {item.label}
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
+      {/* Mobile Navbar */}
       <div className="md:hidden flex justify-between items-center px-4">
-        <img src={logo} alt="logo" className="w-32" />
-        <button className="text-white" onClick={() => setMenuOpen(!isMenuOpen)}>
+        <motion.img
+          src={logo}
+          alt="logo"
+          className="w-32"
+          whileHover={{ scale: 1.1, rotate: 5 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        />
+        <motion.button
+          className="text-white"
+          onClick={() => setMenuOpen(!isMenuOpen)}
+          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.2 }}
+        >
           {isMenuOpen ? (
             <MdClose className="text-white h-6 w-6" />
           ) : (
             <AiOutlineBars className="text-white h-7 w-7" />
           )}
-        </button>
+        </motion.button>
       </div>
-      <div
+      {/* Mobile Menu */}
+      <motion.div
         ref={menuRef}
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } absolute top-[74px] left-0 w-full bg-gray-800 text-white p-4 transition-all z-50`}
+        initial={{ x: "-100%" }}
+        animate={{ x: isMenuOpen ? "0%" : "-100%" }}
+        transition={{ duration: 0.3 }}
+        className="absolute top-[74px] left-0 w-full bg-gray-800 text-white p-4 z-50"
       >
         <motion.div
           className="flex flex-col space-y-5 mx-5"
@@ -88,6 +130,7 @@ const Navbar = () => {
               custom={index}
               initial="hidden"
               animate="visible"
+              exit="hidden"
               variants={variants}
             >
               <NavLink
@@ -104,7 +147,7 @@ const Navbar = () => {
             </motion.div>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </nav>
   );
 };
