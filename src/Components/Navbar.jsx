@@ -58,7 +58,7 @@ const Navbar = () => {
               custom={index}
               variants={variants}
             >
-              <Link to={item.to} className="hover:text-red-500">
+              <Link to={item.to} className="hover:text-red-500 font-semibold">
                 {item.label}
               </Link>
             </motion.div>
@@ -82,7 +82,7 @@ const Navbar = () => {
               custom={index}
               variants={variants}
             >
-              <Link to={item.to} className="hover:text-red-500">
+              <Link to={item.to} className="hover:text-red-500 font-semibold">
                 {item.label}
               </Link>
             </motion.div>
@@ -120,7 +120,7 @@ const Navbar = () => {
         className="absolute top-[74px] left-0 w-full bg-gray-800 text-white p-4 z-50"
       >
         <motion.div
-          className="flex flex-col space-y-5 mx-5"
+          className="flex flex-col space-y-4 mx-5"
           initial="hidden"
           animate="visible"
         >

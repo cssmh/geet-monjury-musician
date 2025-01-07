@@ -13,8 +13,9 @@ const Banner = () => {
 
   const NextArrow = ({ onClick }) => (
     <div
-      className="absolute top-1/2 right-2 lg:right-5 transform -translate-y-1/2 z-10 cursor-pointer text-white p-2 rounded-full focus:outline-none"
+      className="absolute top-1/2 right-2 lg:right-5 transform -translate-y-1/2 z-10 cursor-pointer text-white p-2 rounded-full focus:outline-none transition-transform hover:scale-110"
       onClick={onClick}
+      aria-label="Next Slide"
     >
       <AiOutlineRight size={24} />
     </div>
@@ -22,8 +23,9 @@ const Banner = () => {
 
   const PrevArrow = ({ onClick }) => (
     <div
-      className="absolute top-1/2 left-2 lg:left-5 transform -translate-y-1/2 z-10 cursor-pointer text-white p-2 rounded-full focus:outline-none"
+      className="absolute top-1/2 left-2 lg:left-5 transform -translate-y-1/2 z-10 cursor-pointer text-white p-2 rounded-full focus:outline-none transition-transform hover:scale-110"
       onClick={onClick}
+      aria-label="Previous Slide"
     >
       <AiOutlineLeft size={24} />
     </div>
@@ -37,17 +39,22 @@ const Banner = () => {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    adaptiveHeight: true,
   };
 
   return (
     <div className="relative w-full focus:outline-none">
       <Slider {...settings}>
         {images.map((img, index) => (
-          <div key={index} className="w-full h-[30vh] md:h-[55vh] lg:h-[83vh] focus:outline-none">
+          <div
+            key={index}
+            className="w-full h-[30vh] md:h-[55vh] lg:h-[83vh] focus:outline-none"
+          >
             <img
               src={img}
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover rounded-md lg:rounded-lg pointer-events-none"
+              loading="lazy"
             />
           </div>
         ))}

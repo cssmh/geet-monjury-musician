@@ -1,40 +1,58 @@
 import Lottie from "lottie-react";
 import animationData from "../assets/music.json";
+import { motion } from "framer-motion";
 
 const MusicVideo = () => {
   return (
     <div className="text-white my-7 lg:my-12">
-      <h2
-        data-aos="zoom-in-down"
-        data-aos-duration="600"
+      <motion.h2
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
         className="text-2xl md:text-3xl font-bold text-center mb-3"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
         New Music Shorts
-      </h2>
-      <p
+      </motion.h2>
+      <motion.p
         data-aos="fade-up"
         data-aos-anchor-placement="bottom-bottom"
         className="text-sm text-center mb-2 md:mb-6 px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
       >
-        Enjoy the latest music video from geet monjory. Immerse yourself in the
+        Enjoy the latest music video from Geet Monjory. Immerse yourself in the
         captivating visuals and soulful tunes!
-      </p>
+      </motion.p>
+      <div className="flex flex-col w-full lg:flex-row justify-center items-center gap-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          <Lottie
+            animationData={animationData}
+            className="w-2/3 mx-auto lg:w-[80%]"
+            loop={true}
+          />
+        </motion.div>
 
-      <div className="flex flex-col w-full lg:flex-row justify-center items-center gap-3">
-        <div>
-          <Lottie animationData={animationData} loop={true} />
-        </div>
+        {/* YouTube Video */}
         <div className="w-full mx-2 lg:w-1/2">
-          <iframe
-            width="100%"
-            height="415"
-            src="https://www.youtube.com/embed/7GeUVrDM-oY"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="rounded-lg shadow-lg"
-          ></iframe>
+          <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/7GeUVrDM-oY"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute top-0 left-0 w-full h-full"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
