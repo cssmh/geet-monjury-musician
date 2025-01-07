@@ -43,11 +43,11 @@ const Banner = () => {
     <div className="relative w-full focus:outline-none">
       <Slider {...settings}>
         {images.map((img, index) => (
-          <div key={index} className="w-full h-[30vh] md:h-[50vh] lg:h-[83vh] focus:outline-none">
+          <div key={index} className="w-full h-[43vh] md:h-[60vh] lg:h-[83vh] focus:outline-none">
             <img
               src={img}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover rounded-lg pointer-events-none"
+              className="w-full h-full object-cover rounded-md lg:rounded-lg pointer-events-none"
             />
           </div>
         ))}

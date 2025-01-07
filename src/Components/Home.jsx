@@ -1,15 +1,13 @@
-import FeaturedArtists from "../Pages/FeaturedArtists";
+import Artists from "../Pages/Artists";
 import MusicVideo from "../Pages/MusicVideo";
 import Banner from "./Banner";
-import NewMusic from "./NewMusic";
 
 const Home = () => {
   return (
     <div>
       <Banner />
       <MusicVideo />
-      <NewMusic />
-      <FeaturedArtists />
+      <Artists />
     </div>
   );
 };
