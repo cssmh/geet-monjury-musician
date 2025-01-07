@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -15,45 +14,16 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/about-us" className="hover:text-red-500">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/gallery" className="hover:text-red-500">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-red-500">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-            <div className="flex justify-center md:justify-start space-x-4">
-              <a
-                href="https://www.facebook.com/saju1976"
-                className="hover:text-red-500"
-              >
-                <FaFacebook size={24} />
-              </a>
-              <a href="#" className="hover:text-red-500">
-                <FaInstagram size={24} />
-              </a>
-              <a href="#" className="hover:text-red-500">
-                <FaTwitter size={24} />
-              </a>
-              <a
-                href="https://www.youtube.com/@geetmonjory8955"
-                className="hover:text-red-500"
-              >
-                <FaYoutube size={24} />
-              </a>
+            <div className="flex items-center gap-4">
+              <Link to="/about-us" className="hover:text-red-500">
+                About Us
+              </Link>
+              <Link to="/gallery" className="hover:text-red-500">
+                Gallery
+              </Link>
+              <Link to="/contact" className="hover:text-red-500">
+                Contact
+              </Link>
             </div>
           </div>
         </div>
