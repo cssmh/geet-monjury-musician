@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-            <div className="flex items-center gap-4">
+            <div className="flex justify-center md:justify-start items-center gap-4">
               <Link to="/about-us" className="hover:text-red-500">
                 About Us
               </Link>
@@ -26,6 +26,14 @@ const Footer = () => {
               </Link>
             </div>
           </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+            <p className="text-gray-400 mb-2">Email: info@geetmonjory.com</p>
+            <p className="text-gray-400 mb-2">Phone: +123 456 7890</p>
+            <p className="text-gray-400 mb-2">
+              Address: 123 Music Lane, City, Country
+            </p>
+          </div>
         </div>
         <div className="border-t border-gray-700 my-6"></div>
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
@@ -35,7 +43,7 @@ const Footer = () => {
           <p>
             Designed by{" "}
             <a
-              // href="https://www.facebook.com/touristmomen"
+              href="https://www.facebook.com/touristmomen"
               className="hover:text-red-500"
             >
               Momen

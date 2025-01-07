@@ -16,6 +16,8 @@ const Artists = () => {
         {artists.map((artist, index) => (
           <div
             key={index}
+            data-aos="fade-right"
+            data-aos-duration={500 * index}
             className="shadow-lg rounded-lg p-4 text-center"
           >
             <img

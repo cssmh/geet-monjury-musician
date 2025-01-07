@@ -4,10 +4,20 @@ import animationData from "../assets/music.json";
 const MusicVideo = () => {
   return (
     <div className="text-white my-7 lg:my-12">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">New Music Shorts</h2>
-      <p className="text-sm text-center mb-2 md:mb-6 px-4">
-        Enjoy the latest music video from geet monjory. Immerse yourself
-        in the captivating visuals and soulful tunes!
+      <h2
+        data-aos="zoom-in-down"
+        data-aos-duration="600"
+        className="text-2xl md:text-3xl font-bold text-center mb-3"
+      >
+        New Music Shorts
+      </h2>
+      <p
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+        className="text-sm text-center mb-2 md:mb-6 px-4"
+      >
+        Enjoy the latest music video from geet monjory. Immerse yourself in the
+        captivating visuals and soulful tunes!
       </p>
 
       <div className="flex flex-col w-full lg:flex-row justify-center items-center gap-3">

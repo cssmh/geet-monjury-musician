@@ -10,21 +10,22 @@ import logo from "../assets/monjory_logo.png";
 const SocialHandles = () => {
   return (
     <div className="bg-[#202021] mt-12">
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-8">
-        <div className="flex items-center">
-          <img src={logo} alt="Logo" className="w-[40%]" />
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center p-8">
+        <div className="flex items-center space-y-3">
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-32 lg:w-[40%] mx-auto md:mx-0"
+          />
         </div>
-        <div className="flex space-x-7">
+        <div className="flex space-x-3 items-center md:space-x-9 mt-6 md:mt-0">
           <a
             href="https://www.facebook.com/saju1976"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center"
           >
-            <FaFacebook
-              size={70}
-              className="text-blue-600 transition duration-300"
-            />
+            <FaFacebook className="text-blue-600 text-3xl md:text-6xl transition duration-300" />
             <span className="text-white pt-3">Facebook</span>
           </a>
           <a
@@ -33,10 +34,7 @@ const SocialHandles = () => {
             rel="noopener noreferrer"
             className="flex flex-col items-center"
           >
-            <FaTwitter
-              size={70}
-              className="text-blue-400 transition duration-300"
-            />
+            <FaTwitter className="text-blue-400 text-3xl md:text-6xl transition duration-300" />
             <span className="text-white pt-3">Twitter</span>
           </a>
           <a
@@ -45,10 +43,7 @@ const SocialHandles = () => {
             rel="noopener noreferrer"
             className="flex flex-col items-center"
           >
-            <FaInstagram
-              size={70}
-              className="text-pink-500 transition duration-300"
-            />
+            <FaInstagram className="text-pink-500 text-3xl md:text-6xl transition duration-300" />
             <span className="text-white pt-3">Instagram</span>
           </a>
           <a
@@ -57,10 +52,7 @@ const SocialHandles = () => {
             rel="noopener noreferrer"
             className="flex flex-col items-center"
           >
-            <FaYoutube
-              size={70}
-              className="text-red-600 transition duration-300"
-            />
+            <FaYoutube className="text-red-600 text-3xl md:text-6xl transition duration-300" />
             <span className="text-white pt-3">YouTube</span>
           </a>
           <a
@@ -69,10 +61,7 @@ const SocialHandles = () => {
             rel="noopener noreferrer"
             className="flex flex-col items-center"
           >
-            <FaSpotify
-              size={70}
-              className="text-green-500 transition duration-300"
-            />
+            <FaSpotify className="text-green-500 text-3xl md:text-6xl transition duration-300" />
             <span className="text-white pt-3">Spotify</span>
           </a>
         </div>
