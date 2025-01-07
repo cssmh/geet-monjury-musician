@@ -6,13 +6,13 @@ const FeaturedArtists = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-10">
+    <div className="text-white py-6">
       <h2 className="text-3xl font-bold text-center mb-8">Featured Artists</h2>
       <div className="flex flex-wrap justify-center gap-8">
         {artists.map((artist, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg p-4 w-64 text-center"
+            className="shadow-lg rounded-lg p-4 w-64 text-center"
           >
             <img
               src={artist.image}
