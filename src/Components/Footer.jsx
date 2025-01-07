@@ -28,10 +28,10 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-            <p className="text-gray-400 mb-2">Email: info@geetmonjory.com</p>
-            <p className="text-gray-400 mb-2">Phone: +123 456 7890</p>
+            <p className="text-gray-400 mb-2">Email: Sheikhsaju1976@gmail</p>
+            <p className="text-gray-400 mb-2">Phone: +8801780710904</p>
             <p className="text-gray-400 mb-2">
-              Address: 123 Music Lane, City, Country
+              23/1 Maa, Palace, Zilla School Road, Mymensingh
             </p>
           </div>
         </div>

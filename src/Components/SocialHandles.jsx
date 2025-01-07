@@ -20,6 +20,8 @@ const SocialHandles = () => {
         </div>
         <div className="flex space-x-3 items-center md:space-x-9 mt-6 md:mt-0">
           <a
+            data-aos="fade-up"
+            data-aos-delay="200"
             href="https://www.facebook.com/saju1976"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,6 +31,8 @@ const SocialHandles = () => {
             <span className="text-white pt-3">Facebook</span>
           </a>
           <a
+            data-aos="fade-up"
+            data-aos-delay="400"
             href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -38,6 +42,8 @@ const SocialHandles = () => {
             <span className="text-white pt-3">Twitter</span>
           </a>
           <a
+            data-aos="fade-up"
+            data-aos-delay="600"
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -47,6 +53,8 @@ const SocialHandles = () => {
             <span className="text-white pt-3">Instagram</span>
           </a>
           <a
+            data-aos="fade-up"
+            data-aos-delay="800"
             href="https://www.youtube.com/@geetmonjory8955"
             target="_blank"
             rel="noopener noreferrer"
@@ -56,6 +64,8 @@ const SocialHandles = () => {
             <span className="text-white pt-3">YouTube</span>
           </a>
           <a
+            data-aos="fade-up"
+            data-aos-delay="1000"
             href="https://www.spotify.com"
             target="_blank"
             rel="noopener noreferrer"
