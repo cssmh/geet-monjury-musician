@@ -1,3 +1,4 @@
+import banner from "../assets/banner.jpg";
 import band from "../assets/artist.jpg";
 import band1 from "../assets/band.jpg";
 import band2 from "../assets/bang2.jpg";
@@ -9,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 const Banner = () => {
-  const images = [band, band1, band2, band3];
+  const images = [banner, band1, band, band2, band3];
 
   const NextArrow = ({ onClick }) => (
     <div

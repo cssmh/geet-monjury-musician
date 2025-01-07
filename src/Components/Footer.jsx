@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-            <p className="text-gray-400 mb-2">Email: Sheikhsaju1976@gmail</p>
+            <p className="text-gray-400 mb-2">Email: sheikhsaju1976@gmail.com</p>
             <p className="text-gray-400 mb-2">Phone: +8801780710904</p>
             <p className="text-gray-400 mb-2">
               23/1 Maa, Palace, Zilla School Road, Mymensingh

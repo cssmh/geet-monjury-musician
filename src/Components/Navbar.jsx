@@ -33,6 +33,19 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setMenuOpen(false);
@@ -46,7 +59,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-gray-900 text-white py-1">
+    <nav className="bg-black text-white py-1">
+      {/* bg-gradient-to-t from-[#e96150] to-[#090808] */}
       {/* Desktop Navbar */}
       <div className="flex justify-center items-center">
         <div className="hidden md:flex space-x-5">

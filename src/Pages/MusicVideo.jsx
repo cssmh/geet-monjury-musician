@@ -6,8 +6,6 @@ const MusicVideo = () => {
   return (
     <div className="text-white my-7 lg:my-12">
       <motion.h2
-        data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
         className="text-2xl md:text-3xl font-bold text-center mb-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -16,8 +14,6 @@ const MusicVideo = () => {
         New Music Shorts
       </motion.h2>
       <motion.p
-        data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom"
         className="text-sm text-center mb-2 md:mb-6 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
