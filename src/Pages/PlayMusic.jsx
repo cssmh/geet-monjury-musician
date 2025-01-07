@@ -34,10 +34,10 @@ const PlayMusic = () => {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.pause(); // Pause the current track when a new track is selected
-      audioRef.current.load(); // Reload the new track
+      audioRef.current.pause();
+      audioRef.current.load();
       if (isPlaying) {
-        audioRef.current.play(); // Auto play the selected track
+        audioRef.current.play();
       }
     }
   }, [currentTrack, isPlaying]);
@@ -68,7 +68,7 @@ const PlayMusic = () => {
 
   const handleTrackChange = (index) => {
     setCurrentTrack(index);
-    setIsPlaying(true); // Automatically start the selected track
+    setIsPlaying(true);
   };
 
   return (
@@ -136,8 +136,6 @@ const PlayMusic = () => {
             }}
           />
         </div>
-
-        {/* Volume Control */}
         <div className="flex items-center space-x-2 mb-6">
           <FaVolumeMute className="text-white" />
           <input
@@ -151,25 +149,21 @@ const PlayMusic = () => {
           />
           <FaVolumeUp className="text-white" />
         </div>
-
-        {/* More Music Section */}
         <div className="mt-6 text-white">
           <h3 className="text-xl font-semibold mb-4">More Music</h3>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4">
             {demoTracks.map((track, index) => (
               <div
                 key={index}
-                onClick={() => handleTrackChange(index)} // Automatically select and start track
+                onClick={() => handleTrackChange(index)}
                 className="flex items-center space-x-4 cursor-pointer hover:bg-gray-700 p-3 rounded-lg transition"
               >
-                <img
-                  src={track.image}
-                  alt="album cover"
-                  className="w-16 h-16 object-cover rounded-lg"
-                />
-                <div>
-                  <h4 className="text-lg">{track.name}</h4>
-                  <p className="text-gray-400">{track.artist}</p>
+                <div className="flex items-center gap-2">
+                  <p className="text-gray-500">{index + 1}.</p>
+                  <div>
+                    <h4>{track.name}</h4>
+                    <p className="text-gray-400">{track.artist}</p>
+                  </div>
                 </div>
               </div>
             ))}
