@@ -42,7 +42,7 @@ const Banner = () => {
     prevArrow: <PrevArrow />,
     adaptiveHeight: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
   };
 
   return (

@@ -12,7 +12,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", to: "/" },
     { label: "Gallery", to: "/gallery" },
-    { label: "Members", to: "/members" },
+    { label: "Monjory", to: "/monjory" },
     { label: "Albums", to: "/albums" },
     { label: "Video", to: "/video" },
     { label: "About Us", to: "/about-us" },
@@ -59,7 +59,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-black text-white py-1">
+    <nav className="bg-gradient-to-t from-[#350949] to-[#0d0518] text-white py-1">
       {/* bg-gradient-to-t from-[#e96150] to-[#090808] */}
       {/* Desktop Navbar */}
       <div className="flex justify-center items-center">

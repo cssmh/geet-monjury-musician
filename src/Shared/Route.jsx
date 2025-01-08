@@ -3,7 +3,8 @@ import MainLayout from "../Components/MainLayout";
 import Home from "../Components/Home";
 import Error from "../Components/Error";
 import Gallery from "../Pages/Gallery";
-import Members from "../Pages/Members";
+import Monjory from "../Pages/Monjory";
+import AboutUs from "../Pages/AboutUs";
 
 const Route = createBrowserRouter([
   {
@@ -13,7 +14,8 @@ const Route = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/gallery", element: <Gallery /> },
-      { path: "/members", element: <Members /> },
+      { path: "/monjory", element: <Monjory /> },
+      { path: "/about-us", element: <AboutUs /> },
     ],
   },
 ]);
