@@ -9,7 +9,7 @@ import logo from "../assets/monjory_logo.png";
 
 const SocialHandles = () => {
   return (
-    <div className="bg-[#202021] mt-12">
+    <div className="bg-[#2a1a2a] mt-12">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center p-8">
         <div className="flex items-center space-y-3">
           <img

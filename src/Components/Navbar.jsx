@@ -14,7 +14,7 @@ const Navbar = () => {
     { label: "Gallery", to: "/gallery" },
     { label: "Monjory", to: "/monjory" },
     { label: "Albums", to: "/albums" },
-    { label: "Video", to: "/video" },
+    { label: "Video", to: "/videos" },
     { label: "About Us", to: "/about-us" },
   ];
 
@@ -61,9 +61,8 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-t from-[#350949] to-[#0d0518] text-white py-1">
       {/* bg-gradient-to-t from-[#e96150] to-[#090808] */}
-      {/* Desktop Navbar */}
       <div className="flex justify-center items-center">
-        <div className="hidden md:flex space-x-5">
+        <div className="hidden md:flex space-x-8">
           {navItems.slice(0, 3).map((item, index) => (
             <motion.div
               key={item.label}
@@ -131,7 +130,7 @@ const Navbar = () => {
         initial={{ x: "-100%" }}
         animate={{ x: isMenuOpen ? "0%" : "-100%" }}
         transition={{ duration: 0.3 }}
-        className="absolute top-[74px] left-0 w-full bg-gray-800 text-white p-4 z-50"
+        className="absolute top-[76px] left-0 w-full bg-gradient-to-t from-[#0d0518] to-[#350949] text-white p-4 z-50"
       >
         <motion.div
           className="flex flex-col space-y-4 mx-5"

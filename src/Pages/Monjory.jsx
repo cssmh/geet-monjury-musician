@@ -3,8 +3,7 @@ import book1 from "../assets/book1.jpg";
 
 const Monjory = () => {
   return (
-    <div className="bg-black text-white py-12 px-4">
-      {/* Header Section */}
+    <div className="bg-black text-white py-12 px-5">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-2xl md:text-3xl font-extrabold">Geet Monjory</h1>
         <p className="mt-4 text-gray-300 text-lg">
@@ -12,12 +11,11 @@ const Monjory = () => {
           into timeless creations.
         </p>
       </div>
-
-      {/* Content Section */}
       <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Left Section - Description */}
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Meet Geet Monjory</h2>
+          <h2 className="text-2xl text-[#eaaaff] font-semibold mb-4">
+            Meet Geet Monjory
+          </h2>
           <p className="text-gray-300 leading-relaxed">
             Geet Monjory, a celebrated author and music enthusiast, has
             redefined storytelling through books and melodies. With years of
@@ -31,8 +29,6 @@ const Monjory = () => {
             readers.
           </p>
         </div>
-
-        {/* Right Section - Images */}
         <div className="flex flex-col gap-6">
           <div className="relative group">
             <img
@@ -40,7 +36,6 @@ const Monjory = () => {
               alt="Book Cover 1"
               className="rounded-lg h-96 w-2/3 md:h-full md:w-1/2 mx-auto shadow-lg transform group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div className="relative group">
             <img
@@ -48,12 +43,9 @@ const Monjory = () => {
               alt="Book Cover 2"
               className="rounded-lg h-96 w-2/3 md:h-full md:w-1/2 mx-auto shadow-lg transform group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
         </div>
       </div>
-
-      {/* Call-to-Action */}
       <div className="mt-16 text-center">
         <h3 className="text-2xl font-semibold mb-4">
           Explore the Works of Geet Monjory

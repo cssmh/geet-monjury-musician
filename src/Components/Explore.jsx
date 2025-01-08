@@ -2,7 +2,8 @@ import bg from "../assets/explore.jpg";
 const Explore = () => {
   return (
     <div
-      className="bg-no-repeat bg-cover bg-center bg-fixed lg:mt-14 mb-6 md:mb-8"
+      // bg-no-repeat bg-center bg-fixed
+      className="bg-cover lg:mt-14 mb-6 md:mb-8"
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="max-w-7xl mx-auto text-white py-[70px] md:py-24">

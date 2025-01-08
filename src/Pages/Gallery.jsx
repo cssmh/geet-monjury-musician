@@ -12,53 +12,36 @@ import img11 from "../assets/img9.jpg";
 import img12 from "../assets/img10.jpg";
 
 const Gallery = () => {
+  const images = [
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+  ];
+
   return (
-    <div className="max-w-7xl mx-auto mb-8">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="grid gap-4">
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img1} alt="" />
+    <div className="max-w-7xl mx-auto mt-2 mb-8 px-4">
+      <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="mb-4 transform transition-transform hover:scale-105"
+          >
+            <img
+              className="w-full rounded-lg shadow-lg"
+              src={image}
+              alt={`Gallery Image ${index + 1}`}
+            />
           </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img2} alt="" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img3} alt="" />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img4} alt="" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img5} alt="" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img6} alt="" />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img7} alt="" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img8} alt="" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img9} alt="" />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img10} alt="" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img11} alt="" />
-          </div>
-          <div>
-            <img className="h-auto max-w-full rounded-lg" src={img12} alt="" />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

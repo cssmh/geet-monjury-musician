@@ -5,6 +5,8 @@ import Error from "../Components/Error";
 import Gallery from "../Pages/Gallery";
 import Monjory from "../Pages/Monjory";
 import AboutUs from "../Pages/AboutUs";
+import Albums from "../Pages/Albums";
+import Videos from "../Pages/Videos";
 
 const Route = createBrowserRouter([
   {
@@ -16,6 +18,8 @@ const Route = createBrowserRouter([
       { path: "/gallery", element: <Gallery /> },
       { path: "/monjory", element: <Monjory /> },
       { path: "/about-us", element: <AboutUs /> },
+      { path: "/albums", element: <Albums /> },
+      { path: "/videos", element: <Videos /> },
     ],
   },
 ]);
