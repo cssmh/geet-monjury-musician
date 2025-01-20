@@ -90,7 +90,7 @@ const PlayMusic = () => {
         Our newest album is now on youtube, offering a captivating blend of
         melodies and rhythms for listeners to enjoy.
       </p>
-      <div className="max-w-7xl bg-gray-900 p-6 md:p-10 mx-auto rounded-lg shadow-lg">
+      <div className="max-w-7xl p-6 md:p-10 mx-auto rounded-lg shadow-lg">
         <div className="flex flex-col md:flex-row gap-6 md:gap-0 items-center justify-between mb-6">
           <div className="flex items-center">
             <img

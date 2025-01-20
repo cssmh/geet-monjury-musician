@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12 bg-black text-white">
+    <div className="max-w-7xl mx-auto px-4 py-12 text-white">
       <div className="text-center mb-7 md:mb-12">
         <h2 className="text-2xl md:text-3xl font-extrabold">
           About Geet Monjory

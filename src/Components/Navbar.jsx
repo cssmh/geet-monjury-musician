@@ -19,14 +19,12 @@ const Navbar = () => {
   ];
 
   const variants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0, y: -10 },
     visible: (i) => ({
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        stiffness: 70,
-        damping: 10,
-        delay: i * 0.2,
+        delay: i * 0.15,
         duration: 0.4,
       },
     }),
@@ -59,99 +57,71 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-gradient-to-t from-[#350949] to-[#0d0518] text-white py-1">
-      {/* bg-gradient-to-t from-[#e96150] to-[#090808] */}
-      <div className="flex justify-center items-center">
-        <div className="hidden md:flex space-x-8">
-          {navItems.slice(0, 3).map((item, index) => (
-            <motion.div
-              key={item.label}
-              initial="hidden"
-              animate="visible"
-              custom={index}
-              variants={variants}
-            >
-              <Link to={item.to} className="hover:text-red-500 font-semibold">
-                {item.label}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-        <div className="text-center mx-8 hidden md:block">
+    <nav className="bg-gradient-to-b from-[#0f010f] via-[#2d0151] to-[#000000] text-white">
+      <div className="flex justify-between items-center px-8 py-2">
+        {/* Logo */}
+        <Link to="/" className="flex items-center space-x-2">
           <motion.img
             src={logo}
             alt="logo"
-            className="mx-auto w-40"
-            whileHover={{ scale: 1.1, rotate: 5 }}
+            className="w-24 md:w-32"
+            whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
           />
-        </div>
-        <div className="hidden md:flex space-x-5">
-          {navItems.slice(3).map((item, index) => (
+        </Link>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-8 font-medium">
+          {navItems.map((item, index) => (
             <motion.div
               key={item.label}
               initial="hidden"
               animate="visible"
               custom={index}
-              variants={variants}
-            >
-              <Link to={item.to} className="hover:text-red-500 font-semibold">
-                {item.label}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-      {/* Mobile Navbar */}
-      <div className="md:hidden flex justify-between items-center px-4">
-        <motion.img
-          src={logo}
-          alt="logo"
-          className="w-32"
-          whileHover={{ scale: 1.1, rotate: 5 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
-        <motion.button
-          className="text-white"
-          onClick={() => setMenuOpen(!isMenuOpen)}
-          whileTap={{ scale: 0.9 }}
-          whileHover={{ scale: 1.2 }}
-        >
-          {isMenuOpen ? (
-            <MdClose className="text-white h-6 w-6" />
-          ) : (
-            <AiOutlineBars className="text-white h-7 w-7" />
-          )}
-        </motion.button>
-      </div>
-      {/* Mobile Menu */}
-      <motion.div
-        ref={menuRef}
-        initial={{ x: "-100%" }}
-        animate={{ x: isMenuOpen ? "0%" : "-100%" }}
-        transition={{ duration: 0.3 }}
-        className="absolute top-[76px] left-0 w-full bg-gradient-to-t from-[#0d0518] to-[#350949] text-white p-4 z-50"
-      >
-        <motion.div
-          className="flex flex-col space-y-4 mx-5"
-          initial="hidden"
-          animate="visible"
-        >
-          {navItems.map((item, index) => (
-            <motion.div
-              key={item.to}
-              custom={index}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
               variants={variants}
             >
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-red-500 font-bold hover:text-red-600"
-                    : "hover:text-red-500"
+                    ? "text-[#f39c12] underline"
+                    : "hover:text-[#f39c12] transition"
+                }
+              >
+                {item.label}
+              </NavLink>
+            </motion.div>
+          ))}
+        </div>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white text-2xl"
+          onClick={() => setMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <MdClose /> : <AiOutlineBars />}
+        </button>
+      </div>
+      {/* Mobile Menu */}
+      <motion.div
+        ref={menuRef}
+        initial={{ height: 0 }}
+        animate={{ height: isMenuOpen ? "auto" : 0 }}
+        className="md:hidden overflow-hidden bg-gradient-to-b from-[#0f010f] via-[#2d0151] to-[#000000] text-white"
+      >
+        <div className="flex flex-col space-y-4 p-4">
+          {navItems.map((item, index) => (
+            <motion.div
+              key={item.label}
+              custom={index}
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+            >
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#f39c12] font-semibold underline"
+                    : "hover:text-[#f39c12] transition"
                 }
                 onClick={() => setMenuOpen(false)}
               >
@@ -159,7 +129,7 @@ const Navbar = () => {
               </NavLink>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </motion.div>
     </nav>
   );

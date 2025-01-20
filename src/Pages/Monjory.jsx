@@ -3,7 +3,7 @@ import book1 from "../assets/book1.jpg";
 
 const Monjory = () => {
   return (
-    <div className="bg-black text-white py-12 px-5">
+    <div className="text-white py-12 px-5">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-2xl md:text-3xl font-extrabold">Geet Monjory</h1>
         <p className="mt-4 text-gray-300 text-lg">

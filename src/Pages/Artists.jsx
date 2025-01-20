@@ -11,13 +11,11 @@ const Artists = () => {
 
   return (
     <div className="max-w-7xl mx-auto text-white my-4 lg:my-6">
-      <h2 className="text-3xl font-bold text-center mb-2 text-teal-400">Artists</h2>
+      <h2 className="text-3xl font-bold text-center mb-2">Artists</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">
         {artists.map((artist, index) => (
           <div
             key={index}
-            // data-aos="fade-right"
-            // data-aos-duration={400 * index}
             className="shadow-lg rounded-lg p-4 text-center"
           >
             <img
